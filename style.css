@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000000; /* Cor de fundo para a área do formulário */
+}
+
+/* Seção do Topo com Background */
+.hero-section {
+    background-image: url('fundo-cellebrai.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens no topo */
+    padding-top: 80px; /* Controla o quão alto eles ficam */
+}
+
+/* Grid dos Círculos */
+.lista-circular-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px; /* Espaço entre as fotos e o botão */
+}
+
+.card-item-circular {
+    width: 190px;
+    height: 190px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FCF6BA;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-item-circular:hover {
+    transform: scale(1.25);
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    z-index: 10;
+}
+
+.foto-produto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-bottom: 8px;
+    border: 2px solid #BF953F;
+}
+
+/* Botão de Scroll Estilizado */
+.btn-scroll {
+    text-decoration: none;
+    background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+    padding: 18px 45px;
+    border-radius: 50px;
+    color: #44340d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(187, 158, 29, 0.4);
+    transition: 0.3s;
+}
+
+.btn-scroll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(187, 158, 29, 0.6);
+}
+
+/* Área de Agendamento (Embaixo do fundo) */
+.footer-booking {
+    padding: 80px 20px;
+    background-color: #000000; /* Fundo sólido para clareza */
+    display: flex;
+    justify-content: center;
+}
+
+.container-agendamento {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 25px;
+    background: #d6d1d15e;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.btn-submit {
+    background: linear-gradient(
+        135deg,
+        #BF953F 0%,
+        #FCF6BA 25%,
+        #B38728 50%,
+        #FBF5B7 75%,
+        #AA771C 100%
+    );
+    
+    /* Efeito de "Glitter" e textura através de fundo de imagem (opcional) */
+    /* background-image: url('url-de-uma-imagem-de-glitter.png'); */
+    
+    background-size: 200% auto;
+    color: #5d4037;
+    padding: 15px 30px;
+    border: 2px solid #a67c00;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    /* Sombra para efeito 3D */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    
+    transition: all 0.4s ease;
+    
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.botao-dourado:hover {
+    background-position: right center; /* Move o gradiente no hover */
+    box-shadow: 0 6px 12px rgba(184, 134, 11, 0.5), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px); /* Levanta o botão */
+}
+
+.btn-submit:hover {
+    background: #BF953F;
+}
+
+
+    .h2{
+        color: #FBF5B7;
+    }

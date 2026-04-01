@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrai - Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="lista-circular-grid">
+            <div class="card-item-circular">
+                <div class="foto-produto" style="background-image: url('/assr/quarto.webp')"></div>
+                <strong>QUARTOS</strong>
+            </div>
+            <div class="card-item-circular">
+                <div class="foto-produto" style="background-image: url('/assr/piscina.jpeg')"></div>
+                <strong>PISCINA</strong>
+            </div>
+            <div class="card-item-circular">
+                <div class="foto-produto" style="background-image: url('/assr/cozinha.jpeg')"></div>
+                <strong>COZINHA</strong>
+            </div>
+        </div>
+
+        <a href="#agendamento-ancora" class="btn-scroll">Realizar Agendamento</a>
+    </section>
+
+    <div id="agendamento-ancora" class="footer-booking">
+        <div class="container-agendamento">
+            <h2 class="h2">Reserve a sua data</h2>
+            <input type="text" id="nome" class="input-field" placeholder="Nome do cliente">
+            <input type="text" id="telefone" class="input-field" placeholder="Telefone">
+            <input type="date" id="data" class="input-field">
+            <button onclick="agendar()" class="btn-submit">Confirmar Agora</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
