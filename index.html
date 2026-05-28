@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celebrai - Agendamento</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
@@ -24,19 +26,29 @@
             </div>
         </div>
 
+        <div class="regras-container">
+            <button class="btn-regras">Regras</button>
+            <div class="popup-regras">
+                <img src="/assr/regras.png" alt="Regras" class="popup-image">
+            </div>
+        </div>
+
         <a href="#agendamento-ancora" class="btn-scroll">Realizar Agendamento</a>
     </section>
 
     <div id="agendamento-ancora" class="footer-booking">
-        <div class="container-agendamento">
+        <div class="container-agendamento" id="formulario-container">
             <h2 class="h2">Reserve a sua data</h2>
             <input type="text" id="nome" class="input-field" placeholder="Nome do cliente">
             <input type="text" id="telefone" class="input-field" placeholder="Telefone">
-            <input type="date" id="data" class="input-field">
+            <input type="text" id="data" class="input-field" placeholder="Selecione a data">
             <button onclick="agendar()" class="btn-submit">Confirmar Agora</button>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    
     <script src="index.js"></script>
 </body>
 </html>

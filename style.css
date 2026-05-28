@@ -12,7 +12,7 @@ body {
 
 /* Seção do Topo com Background */
 .hero-section {
-    background-image: url('fundo-cellebrai.png');
+    background-image: url('/assr/fundo-cellebrai.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,3 +159,64 @@ body {
     .h2{
         color: #FBF5B7;
     }
+
+
+    /* POSIÇÃO NO CANTO DIREITO */
+.regras-container{
+    position: absolute;
+    top: 75px;   /* sobe ou desce */
+    right: 60px; /* distancia da direita */
+    z-index: 999;
+}
+
+/* BOTÃO */
+.btn-regras{
+    background: linear-gradient(145deg,#f7d774,#c79a2b,#f7d774);
+    color: #7c6706;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 31px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+.btn-regras:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255,215,0,0.9);
+}
+
+/* POPUP DA IMAGEM */
+.popup-regras{
+    position: absolute;
+    top: 110%;
+    right: 0;
+
+    width: 400px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: 0.4s ease;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 0 35px rgba(0,0,0,0.8);
+}
+
+/* MOSTRAR AO PASSAR O MOUSE */
+.regras-container:hover .popup-regras{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.popup-regras img{
+    width: 100%;
+    display: block;
+}
