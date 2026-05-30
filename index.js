@@ -14,7 +14,7 @@ async function agendar() {
 
     const novoAgendamento = {
         cliente: nome,
-        data: data // Envia no formato DD-MM-YYYY
+        data: data // O Flatpickr já entrega no formato "YYYY-MM-DD" ideal para o Python
     };
 
     try {
@@ -37,9 +37,9 @@ async function agendar() {
                         <p style="color: #555; font-size: 14px;">Um e-mail com os detalhes foi enviado para o proprietário.</p>
                         <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
                         <h3 style="color: #333; font-size: 16px; margin-bottom: 5px;">Acesse o Pix para confirmar</h3>
-                        <p style="color: #666; font-size: 13px; mb: 10px;">Escaneie o QR Code abaixo ou utilize a chave Pix:</p>
+                        <p style="color: #666; font-size: 13px; margin-bottom: 10px;">Escaneie o QR Code abaixo ou utilize a chave Pix:</p>
                         
-                        <img src="/assr/qrcode-pix.png" alt="QR Code PIX Fixo" style="width: 180px; height: 180px; margin: 10px 0; border: 1px solid #ddd; padding: 5px; border-radius: 5px;">
+                        <img src="assr/qrcode-pix.png" alt="QR Code PIX Fixo" style="width: 180px; height: 180px; margin: 10px 0; border: 1px solid #ddd; padding: 5px; border-radius: 5px;">
                         
                         <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px dashed #28a745; margin-top: 10px; word-break: break-all;">
                             <span style="font-size: 14px; color: #333;"><strong>Chave PIX:</strong> deboraewerbeth@gmail.com</span>
@@ -71,7 +71,7 @@ async function atualizarCalendario() {
         const datasOcupadas = await resposta.json(); // Array vindo do Python: ["2026-06-12", "2026-06-20"]
 
         // Se o calendário já estiver na tela, destrói para criar um novo atualizado
-        if (calendarioInstancia) {
+        if (calendariaInstancia) {
             calendarioInstancia.destroy();
         }
 
@@ -92,9 +92,9 @@ async function atualizarCalendario() {
                 const dia = String(dayElem.dateObj.getDate()).padStart(2, '0');
                 const dataFormatada = `${ano}-${mes}-${dia}`;
 
-                // Se a data do calendário constar nas datas ocupadas vindas do Python, pinta de vermelho
+                // Se a data do calendário constar nas datas ocupadas vindas do Python, pinta de vermelho vivo
                 if (datasOcupadas.includes(dataFormatada)) {
-                    dayElem.style.backgroundColor = "#917902"; // Cor vermelha para indicar bloqueio
+                    dayElem.style.backgroundColor = "#e44d4d"; // Vermelho suave profissional
                     dayElem.style.color = "#fff";
                     dayElem.style.borderRadius = "50%";
                 }
